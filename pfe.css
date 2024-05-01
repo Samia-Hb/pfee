@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Noto+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: -moz-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+    background: -webkit-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.chatbot {
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.chat-input {
+    position: fixed;
+    bottom: 25px;
+    right: 0;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.middle-side {
+    text-align: center;
+    margin: 24px auto 0 auto;
+    padding: 0 20px 0 0;
+    list-style: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    color: rgb(194, 169, 169);
+}
+
+textarea {
+    flex: 1;
+    height: 40px;
+    border-radius: 15px;
+    padding: 5px;
+    resize: none;
+    margin-right: 10px;
+}
+
+.vertical-line {
+    position: fixed;
+    top: 0;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100vh;
+    background-color: #000;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin: 9px;
+}
+
+/* Add this CSS to your existing styles */
+.icons i:hover
+{
+    border: 1px solid #22254C;
+    border-radius: 50%;
+    padding: 8px;
+    color:  #22254C;
+    background-color: white;
+}
+
+
+.icons span,
+.icons i {
+    margin-right: 5px;
+    color: aliceblue;
+    padding: 5px;
+}
+
+.chatbox {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    height: calc(100% - 100px); /* Adjust height as needed */
+}
+
+.chat_incoming,
+.chat_outgoing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.chat_incoming i,
+.chat_outgoing i {
+    margin-right: 10px;
+}
+.chat_incoming
+{
+  margin-left: 250px;
+}
+
+.chat_outgoing {
+    justify-content: flex-end;
+}
+
+.chat_incoming p,
+.chat_outgoing p {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.chat_incoming p {
+    background-color: #fff;
+    color: #333;
+}
+
+.chat_outgoing p {
+    background-color: #0AD5C1;
+    color: #fff;
+}
+
+.chat-input textarea {
+    height: 60px; /* Adjust height as needed */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .chat-input {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+/* Variables */
+:root {
+    --scrollbar-width: 10px;
+    --chat-thread-bgd-color: rgba(25, 147, 147, 0.2);
+    --chat-thread-msg-arrow-size: 15px;
+    --chat-thread-avatar-size: 50px;
+    --chat-thread-offset: 80px; /* Adjust as needed */
+}
+
+/* Body and Scrollbar styles */
+/* Define these styles based on your requirements */
+
+/* Chat Thread styles */
+/* Define these styles based on your requirements */
+
+/* Chat Window styles */
+/* Define these styles based on your requirements */
+
+/* Keyframes for animations */
+@keyframes show-chat-even {
+    0% {
+        margin-left: -480px;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+@keyframes show-chat-odd {
+    0% {
+        margin-right: -480px;
+    }
+    100% {
+        margin-right: 0;
+    }
+}
+

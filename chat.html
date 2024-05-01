@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Bot</title>
+  <style>
+    /* Chat container */
+    .chat-container {
+      border: 1px solid #120e0e;
+      border-radius: 5px;
+      padding: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    /* Bot message */
+    .bot-message {
+      background-color: #f1f1f1;
+      border-radius: 26px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* User message */
+    .user-message {
+      background-color: #e1f7d5;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: right;
+    }
+
+    /* Chat input */
+    .chat-input {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container" id="chat-container">
+    <div class="bot-message">How can I help you?</div>
+  </div>
+  <input type="text" class="chat-input" id="chat-input" placeholder="Type your message...">
+  <button onclick="sendMessage()">Send</button>
+
+  <script>
+    function sendMessage() {
+      // Get user input
+      var userInput = document.getElementById("chat-input").value;
+      
+      // Clear input field
+      document.getElementById("chat-input").value = "";
+
+      // Display user message
+      var userMessageElement = document.createElement("div");
+      userMessageElement.className = "user-message";
+      userMessageElement.textContent = userInput;
+      document.getElementById("chat-container").appendChild(userMessageElement);
+
+      // Simulate botvg g  response
+      setTimeout(function() {
+        var botMessageElement = document.createElement("div");
+        botMessageElement.className = "bot-message";
+        botMessageElement.textContent = "I'm a bot. How can I assist you further?";
+        document.getElementById("chat-container").appendChild(botMessageElement);
+      }, 500);
+    }
+  </script>
+</body>
+</html>

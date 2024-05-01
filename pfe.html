@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="PFE">
+    <title>ZASS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pfe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <form>
+        <div class="chatbot">
+            <header>
+                <div class="history-container">
+                    <div class="top">
+                        <h2>chatbot</h2>
+                    </div>
+                    <div class="history">
+                        
+                    </div>
+                </div>
+                <div class="chat-container" id="chat-container">   
+                    <ul class="chatbox">
+                        <li class="chat_incoming">
+                            <i class="fas fa-robot" style="color: white;"></i>
+                            <p>Hi there 👋 <br>How can I help you today ?</p>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="chat-input">
+                    <textarea placeholder="type Here..."></textarea>
+                    <div class="icons">
+                        <div class="chat-in" id="chat-in">
+                            <i class="fas fa-paper-plane" onclick="sendMessage()"></i>
+                        </div>
+                        <i class="fas fa-microphone"></i>
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                </div>
+            </header>
+        </div>     
+    </form>
+
+    <script>
+        function sendMessage() {
+            // Get user input
+            var userInput = document.querySelector(".chat-input textarea").value;
+        
+            // Display user message
+            var userMessageElement = document.createElement("li");
+            userMessageElement.className = "chat_outgoing";
+            userMessageElement.innerHTML = '<i class="fas fa-user" style="color: white;"></i><p>' + userInput + '</p>';
+            document.querySelector(".chatbox").appendChild(userMessageElement);
+        
+            // Clear input field
+            document.querySelector(".chat-input textarea").value = "";
+        
+            // Simulate bot response
+            setTimeout(function() {
+                var botMessageElement = document.createElement("li");
+                botMessageElement.className = "chat_incoming";
+                botMessageElement.innerHTML = '<i class="fas fa-robot" style="color: white;"></i><p>I\'m a bot. How can I assist you further?</p>';
+                document.querySelector(".chatbox").appendChild(botMessageElement);
+            }, 500);
+        }
+        
+      </script>
+</body>
+</html>
+
+
+</html>
